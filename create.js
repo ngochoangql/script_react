@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+const projectRoot = process.env.INIT_CWD;
 // Cấu trúc thư mục cần tạo
 const baseFolders = {
     a: 'src/components/atoms',
@@ -62,7 +62,7 @@ export default ${Component};
 
 // Hàm tạo thư mục và file
 const createFolder = (automic, basePath, folderName, ComponentName) => {
-    const dirPath = path.join(__dirname, basePath, folderName);
+    const dirPath = path.join(projectRoot, basePath, folderName);
     if (!fs.existsSync(dirPath)) {
         fs.mkdirSync(dirPath, { recursive: true });
         console.log(`Tạo thư mục: ${dirPath}`);
