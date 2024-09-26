@@ -1,0 +1,12 @@
+{
+  "name": "script_react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "node ./postinstall.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
