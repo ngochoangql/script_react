@@ -21,11 +21,11 @@ fs.readFile(packageJsonPath, 'utf8', (err, data) => {
   }
   if (!packageJson.scripts['comp']) {
     // Thêm lệnh create-folders vào scripts
-    packageJson.scripts['comp'] = 'node ./node_modules/repository/create.js';
+    packageJson.scripts['comp'] = 'node ./node_modules/script_react/create.js';
   }
   if (!packageJson.scripts['fol']) {
     // Thêm lệnh create-folders vào scripts
-    packageJson.scripts['fol'] = 'node ./node_modules/repository/index.js';
+    packageJson.scripts['fol'] = 'node ./node_modules/script_react/index.js';
   }
   // Ghi lại package.json
   fs.writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2), 'utf8', (err) => {
