@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Đường dẫn tới file package.json của dự án
-const packageJsonPath = path.join(process.cwd(), 'package.json');
+const projectRoot = process.env.INIT_CWD;
+const packageJsonPath = path.join(projectRoot, 'package.json');
 
 // Đọc nội dung của package.json
 fs.readFile(packageJsonPath, 'utf8', (err, data) => {
